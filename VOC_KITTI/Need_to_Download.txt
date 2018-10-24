@@ -1,1 +1,0 @@
-Download from https://github.com/balancap/SSD-Tensorflow/tree/master/checkpoints
