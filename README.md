@@ -1,6 +1,6 @@
 # KITTI Objects Detection Using SSD in Tensorflow #
 
-##文件位置##
+## 文件位置 ##
 
 ### 数据集 ###
 * VOC格式原始数据集 [VOC_ KITTI](/VOC_KITTI)
