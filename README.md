@@ -40,7 +40,8 @@
 		TRAIN_DIR=logs/finetune_kitti_VOC/
 		CHECKPOINT_PATH=./checkpoints/ssd_300_vgg.ckpt
 		python3 train_ssd_network.py --train_dir=${TRAIN_DIR} --dataset_dir=${DATASET_DIR} --dataset_name=pascalvoc_2007 --dataset_split_name=train --model_name=ssd_300_vgg --checkpoint_path=${CHECKPOINT_PATH} --save_summaries_secs=600 --save_interval_secs=600 --weight_decay=0.0005 --optimizer=adam --learning_rate=0.001 --batch_size=32 --gpu_memory_fraction=0.9 --checkpoint_exclude_scopes =ssd_300_vgg/conv6,ssd_300_vgg/conv7,ssd_300_vgg/block8,ssd_300_vgg/block9,ssd_300_vgg/block10,ssd_300_vgg/block11,ssd_300_vgg/block4_box,ssd_300_vgg/block7_box,ssd_300_vgg/block8_box,ssd_300_vgg/block9_box,ssd_300_vgg/block10_box,ssd_300_vgg/block11_box
-> 训练命令处加上一行checkpoint_exclude_scopes原因：预训练的checkpoints是用21个类别来训练的，与实际训练类别数不同，加上后舍弃了一些层，只用这个原始结构中的weights来训练
+> *  原始训练数据需 [下载](https://github.com/balancap/SSD-Tensorflow/tree/master/checkpoints)
+> * 训练命令处加上一行checkpoint_exclude_scopes原因：预训练的checkpoints是用21个类别来训练的，与实际训练类别数不同，加上后舍弃了一些层，只用这个原始结构中的weights来训练
 
 ## Evaluation ##
 * 在[eval_ssd_network.py](/eval_ssd_network.py) 中66行修改类别数（实际类别数+1）
