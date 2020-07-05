@@ -16,7 +16,7 @@
 ## 数据集转换 ##
 
 ### KITTI->VOC ###
-* 详见TOOLS-Dataset-2-VOC的README
+* 详见[Tools_KITTI2VOC](https://github.com/leofansq/Tools_KITTI2VOC)
 * 将VOC格式的三个文件夹移至 [VOC_ KITTI](/VOC_KITTI)
 
 ### VOC->TFRecord ###
